@@ -6,8 +6,8 @@ import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.api.java.tuple.Tuple3;
 
 /**
- * Base class for defining a Flink pipeline
- * @author kdeivas
+ * Sample Implementation that transforms string to uppercase and filters skip messages
+ * @author karthik
  *
  */
 public class FlinkDataPipeline implements IFlinkDataPipeline<String, String> {
@@ -29,7 +29,6 @@ public class FlinkDataPipeline implements IFlinkDataPipeline<String, String> {
 
 	@Override
 	public MapFunction<String, String> getMapperFunction() {
-		
 		return new MapFunction<String, String>() {
 
 			@Override
